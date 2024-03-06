@@ -9,6 +9,8 @@ chmod 600 /root/.ssh/id_rsa
 chmod 644 /root/.ssh/id_rsa.pub
 nohup /usr/sbin/sshd -D &
 echo 'PS1='"'"'${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u\[\033[00m\]:\[\033[01;35;35m\]\w\[\033[00m\]\$\033[1;32;32m\] '"'" >> /root/.bashrc
+
 wget -O /usr/local/bin/websocat https://github.com/vi/websocat/releases/download/v1.12.0/websocat.x86_64-unknown-linux-musl
+
 chmod +x /usr/local/bin/websocat
 websocat --binary ws-l:127.0.0.1:8080 tcp:127.0.0.1:22

@@ -10,4 +10,4 @@ chmod 644 /root/.ssh/id_rsa.pub
 nohup /usr/sbin/sshd -D &
 wget -O /usr/local/bin/websocat https://github.com/vi/websocat/releases/download/v1.12.0/websocat.x86_64-unknown-linux-musl
 chmod +x /usr/local/bin/websocat
-websocat --binary ws-l:127.0.0.1:8080 tcp:127.0.0.1:22
+websocat --binary ws-l:10.16.18.69:8080 tcp:127.0.0.1:22
